@@ -16,7 +16,7 @@ def find_files(directory, pattern='*.txt'):
 
 def _read_text(filename):
   with tf.gfile.GFile(filename, "r") as f:
-    return list(f.read().decode("utf-8").replace("\n", ""))
+    return list(f.read().replace("\n", ""))
 
 def load_generic_text(directory):
     '''Generator that yields text raw from the directory.'''
